@@ -19,7 +19,7 @@ left_list.sort()
 right_list.sort()
 combined_list = zip(left_list, right_list)
 total_distance = sum([abs(i - j) for i, j in combined_list])
-print(total_distance)
+print(total_distance)  # Print: 1110981
 
 
 # Part 2
@@ -33,4 +33,4 @@ for i in left_list:
 total_sum = 0
 for k, v in appearance_counter.items():
     total_sum += k * v
-print(total_sum)
+print(total_sum)  # Print: 24869388
