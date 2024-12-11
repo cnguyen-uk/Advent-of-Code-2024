@@ -110,20 +110,3 @@ print(len(obstruction_positions(starting_orientation="^", situation_map=input_li
 # Code took 2:21:06.978517 to run.
 # Changing path_is_loop to check for 3 position re-visits instead of 5 runs in 1:47:02.218072,
 # but gives a wrong answer of 1587.
-
-# start_position = starting_position(starting_orientation="^", situation_map=input_list)
-# count_obstruction_positions = 0
-# for distinct_position in set(final_path["positions"]):
-#     if distinct_position != start_position:
-#         row, column = distinct_position[0], distinct_position[1]
-#
-#         original_row_contents = input_list[row]
-#         new_row_contents = original_row_contents[:column] + "O" + original_row_contents[column+1:]
-#
-#         new_situation_map = input_list.copy()
-#         new_situation_map[row] = new_row_contents
-#         new_path = positions_visited(starting_orientation="^", situation_map=new_situation_map)
-#         if new_path["is_loop"]:
-#             print(f"The following position creates a loop: {distinct_position}")
-#             count_obstruction_positions += 1
-# print(count_obstruction_positions)  # Print: 1575
