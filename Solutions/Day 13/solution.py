@@ -55,8 +55,6 @@ def solve_linear_equation(
     if integer_solutions_only:
         solution = solution.round().astype(int)
     is_solution_correct = np.allclose(np.dot(equation_arrays, solution), answer_array, rtol=1.0e-100)
-    for s in solution:
-        print(type(s))
     if is_solution_correct:
         return solution
     return np.array([])
