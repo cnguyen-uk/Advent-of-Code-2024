@@ -11,4 +11,13 @@ The [Solutions](https://github.com/cnguyen-uk/Advent-of-Code-2024/tree/main/Solu
 
 The following are direct links to the solutions for each day:
 
-- [Day 1](Solutions/Day%201/solution.py)
+- [Day 1](solutions/day_01/solution.py)
+- [Day 2](solutions/day_02/solution.py)
+- [Day 3](solutions/day_03/solution.py)
+- [Day 4](solutions/day_04/solution.py)
+- [Day 5](solutions/day_05/solution.py)
+- [Day 6](solutions/day_06/solution.py)
+- [Day 7](solutions/day_07/solution.py)
+- [Day 8](solutions/day_08/solution.py)
+- [Day 9](solutions/day_09/solution.py)
+- [Day 13](solutions/day_13/solution.py)
