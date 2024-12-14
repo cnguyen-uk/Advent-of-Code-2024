@@ -5,8 +5,8 @@ https://adventofcode.com/2024/day/9
 
 from typing import Any
 
-with open("input.txt") as input_txt:
-    input_txt = input_txt.read()
+with open("input.txt") as input_file:
+    input_txt = input_file.read()
 
 
 # Part 1
@@ -27,23 +27,23 @@ def last_non_empty_file_block(blocks: list[int | None]) -> dict[str, Any]:
     for i in reversed(range(len(blocks))):
         if blocks[i] is not None:
             return {"position": i, "block_value": blocks[i]}
+    raise ValueError("All blocks are empty.")
 
 
 def first_empty_file_block_position(blocks: list[int | None]) -> int:
     for i in range(len(blocks)):
         if blocks[i] is None:
             return i
+    raise ValueError("All blocks are non-empty.")
 
 
 def is_compacted(blocks: list[int | None]) -> bool:
     first_none_position = first_empty_file_block_position(blocks)
-    for block in blocks[first_none_position:]:
-        if block is not None:
-            return False
-    return True
+    return all(block is None for block in blocks[first_none_position:])
 
 
 def compactify(blocks: list[int | None]) -> list[int | None]:
+    blocks = blocks.copy()
     while not is_compacted(blocks):
         block_to_move = last_non_empty_file_block(blocks)
         block_to_move_position, block_to_move_value = block_to_move["position"], block_to_move["block_value"]
